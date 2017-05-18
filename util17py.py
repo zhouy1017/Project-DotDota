@@ -43,13 +43,21 @@ def version(date):
 
 
 # In[35]:
-
+# The function to parse the X for predicting and return the prediction
 def who_win(A,B,clf,mlset):
+    # A: string of the name of the team A
+    # B: string of the name of the team B
+    # clf: the fitted classifier 
+    # mlset: the parsed dataframe with the feature vectors for each team in each version
+    # return: arrary of one sinle element, 0 for team A loses and 1 for team A wins
+    # find the feature vectors for each team
     Al = mlset.loc[(mlset['Team'] == A) & (mlset['Version'] == '7.05')]
     Ax = Al.loc[Al.index[0],'Feature_x']
     Bl = mlset.loc[(mlset['Team'] == B) & (mlset['Version'] == '7.05')]
-    Bx = Bl.loc[Bl.index[0],'Feature_x']   
+    Bx = Bl.loc[Bl.index[0],'Feature_x'] 
+    # get the difference vector
     X = list(np.subtract(Ax,Bx))
+    # return the result
     return clf.predict(X)
 
 
