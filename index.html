@@ -11726,9 +11726,7 @@ body {
 div#notebook {
   overflow: visible;
   border-top: none;
-}
-
-@media print {
+}@media print {
   div.cell {
     display: block;
     page-break-inside: avoid;
@@ -11749,7 +11747,7 @@ div#notebook {
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -11773,8 +11771,7 @@ div#notebook {
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11783,8 +11780,7 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11798,8 +11794,7 @@ We will be able to get various results/hypotheses from this process but to make 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11815,8 +11810,7 @@ We will be able to get various results/hypotheses from this process but to make 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11858,25 +11852,23 @@ Datasets and util17py could be found in the project repo:<a href="https://github
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Data-Collection">Data Collection<a class="anchor-link" href="#Data-Collection">&#182;</a></h3><p>Unlike other activities in real world, eSports are based on computer programs which means all gaming match data are generated, collected and stored electronically.  Technically we should be able to collect the data from the data server without extra physical devices (like GPS in football) or manual input.  However, not all game operators are willing to provide match data to public or provide all details of the raw data.  For Dota 2, we have following options:</p>
 
-<pre><code>1.    The official API provided by Valve Software. 
+<pre><code>1.  The official API provided by Valve Software. 
 (Including Third party database like [Dotabuff](https://www.dotabuff.com/) that based on this API.)
-2.    Replay parsing based database.
-3.    Manual collection.
+2.  Replay parsing based database.
+3.  Manual collection.
 </code></pre>
 <p>Option 2 could provide more details than Option 1 because the replay of a match will cover all information while the API does not.  And due to some wrong logged changes (roster registration,etc),the information in the game server might be incorrect.  After consideration, to collect necessary data for our tutorial, we will combine all the options.  We will use <a href="http://datdota.com/">Datdota</a> in Option2 to download the lists of matches of all 8 teams in our event and merge them as our main dataset.  And then use official API to get details of matches in the dataset.  Some trivial information that could not be accessed programmatically such as “which 8 teams are in the event” will be collected manually.</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11899,8 +11891,7 @@ Datasets and util17py could be found in the project repo:<a href="https://github
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11939,7 +11930,9 @@ Load those files as dataframe and then merge them.</p>
 
 
 <div class="output_area">
+
 <div class="prompt output_prompt">Out[3]:</div>
+
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -12009,8 +12002,7 @@ Load those files as dataframe and then merge them.</p>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12072,7 +12064,9 @@ Load those files as dataframe and then merge them.</p>
 
 
 <div class="output_area">
+
 <div class="prompt output_prompt">Out[10]:</div>
+
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -12148,8 +12142,7 @@ Load those files as dataframe and then merge them.</p>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12158,8 +12151,7 @@ Load those files as dataframe and then merge them.</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12190,7 +12182,9 @@ Load those files as dataframe and then merge them.</p>
 
 
 <div class="output_area">
+
 <div class="prompt output_prompt">Out[12]:</div>
+
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -12430,7 +12424,9 @@ Load those files as dataframe and then merge them.</p>
 
 
 <div class="output_area">
+
 <div class="prompt output_prompt">Out[14]:</div>
+
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -12597,8 +12593,7 @@ Load those files as dataframe and then merge them.</p>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12607,8 +12602,7 @@ Load those files as dataframe and then merge them.</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12666,7 +12660,9 @@ Load those files as dataframe and then merge them.</p>
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 
 
@@ -12677,7 +12673,9 @@ Load those files as dataframe and then merge them.</p>
 </div>
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 
 
@@ -12838,8 +12836,7 @@ U9okSWqEPXVJkhphqEuS1AhDXZKkRhjqkiQ1wlCXJKkRhrokSY0w1CVJaoShLklSI/4/lhIIZ3U+
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12879,7 +12876,9 @@ U9okSWqEPXVJkhphqEuS1AhDXZKkRhjqkiQ1wlCXJKkRhrokSY0w1CVJaoShLklSI/4/lhIIZ3U+
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 
 
@@ -13023,7 +13022,9 @@ HmZmVszhYWZmxRweZmZW7L8BLYhIb5hG5LMAAAAASUVORK5CYII=
 </div>
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 
 
@@ -13170,8 +13171,7 @@ xf4/qzxt8yN+Q3cAAAAASUVORK5CYII=
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13180,8 +13180,7 @@ xf4/qzxt8yN+Q3cAAAAASUVORK5CYII=
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13190,14 +13189,14 @@ xf4/qzxt8yN+Q3cAAAAASUVORK5CYII=
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-\begin{equation}
+<p>\begin{equation}
 X_{s} = \frac{X - \mu }{\sigma }
-\end{equation}
+\end{equation}</p>
+
 </div>
 </div>
 </div>
@@ -13259,7 +13258,9 @@ X_{s} = \frac{X - \mu }{\sigma }
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 
 
@@ -13428,7 +13429,9 @@ cZiZWSlOHGZmVooTh5mZleLEYWZmpfwvBZRBnuaoqG4AAAAASUVORK5CYII=
 </div>
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 
 
@@ -13598,8 +13601,7 @@ YII=
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13609,8 +13611,7 @@ Instead of the "seemed good" performance (you can even find improvement!) in raw
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13795,7 +13796,9 @@ We will have a 21 features vector for each team and use them as raw input.<br/><
 
 
 <div class="output_area">
+
 <div class="prompt output_prompt">Out[251]:</div>
+
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -13960,8 +13963,7 @@ We will have a 21 features vector for each team and use them as raw input.<br/><
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14001,7 +14003,9 @@ Next we can get the training/testing dataset ready for the ML.</p>
 
 
 <div class="output_area">
+
 <div class="prompt output_prompt">Out[313]:</div>
+
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -14081,8 +14085,7 @@ Next we can get the training/testing dataset ready for the ML.</p>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14154,7 +14157,9 @@ Next we can get the training/testing dataset ready for the ML.</p>
 
 
 <div class="output_area">
+
 <div class="prompt output_prompt">Out[312]:</div>
+
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -14204,8 +14209,7 @@ Next we can get the training/testing dataset ready for the ML.</p>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14258,8 +14262,7 @@ Next we can get the training/testing dataset ready for the ML.</p>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14270,8 +14273,7 @@ Next we can get the training/testing dataset ready for the ML.</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14281,8 +14283,7 @@ Next we can get the training/testing dataset ready for the ML.</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14296,8 +14297,7 @@ matplotlib:<a href="https://matplotlib.org/">https://matplotlib.org/</a><br/></p
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14320,13 +14320,24 @@ Applying Machine Learning To March Madness:<br/>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Bonus---The-human-predictions-of-the-event-by-myself">Bonus - The human predictions of the event by myself<a class="anchor-link" href="#Bonus---The-human-predictions-of-the-event-by-myself">&#182;</a></h3><p><img src="E.png" alt="Drawing" style="width: 600px;"/></p>
 <h3><center>Predictions (Human) Based on Liquidpedia</center></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Final-Results-Comparing-to-Prediction">Final Results Comparing to Prediction<a class="anchor-link" href="#Final-Results-Comparing-to-Prediction">&#182;</a></h3><p><img src="F.png" alt="Drawing" style="width: 600px;"/></p>
+<p><h3><center>Final Results Comparing to Prediction.  Correct Predictions Marked by Green Lines</center></h3>
+The different match results during group stage caused the change of the arrangement of the playoff matches which made 
+some predicted matches inapplicable.</p>
+
 </div>
 </div>
 </div>
